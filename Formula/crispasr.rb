@@ -32,6 +32,11 @@ class Crispasr < Formula
         "@rpath/libc2pa_c.dylib",
         "#{lib}/libc2pa_c.dylib",
       )
+
+      # Re-sign binaries to clear com.apple.provenance (macOS 14+)
+      system "codesign", "--force", "--sign", "-", "#{bin}/crispasr"
+      system "codesign", "--force", "--sign", "-", "#{bin}/crispasr-quantize"
+      system "codesign", "--force", "--sign", "-", "#{lib}/libc2pa_c.dylib"
     end
 
     on_linux do
@@ -41,6 +46,6 @@ class Crispasr < Formula
   end
 
   test do
-    assert_match(/usage|crispasr/i, shell_output("#{bin}/crispasr --help 2>&1", 1))
+    assert_match "usage", shell_output("#{bin}/crispasr --help 2>&1")
   end
 end
