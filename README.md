@@ -15,7 +15,7 @@ This is a simple example, please refer to [CrispASR](https://github.com/CrispStr
 
 ```bash
 # Download a model (e.g. VibeVoice ASR Q4)
-huggingface-cli download cstr/vibevoice-asr-GGUF vibevoice-asr-q4_k.gguf
+hf download cstr/vibevoice-asr-GGUF vibevoice-asr-q4_k.gguf
 
 # Transcribe a file
 crispasr --model vibevoice-asr-q4_k.gguf --file audio.wav --backend vibevoice
