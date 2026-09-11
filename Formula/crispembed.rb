@@ -1,7 +1,6 @@
 class Crispembed < Formula
   desc "C++ ggml runtime for embeddings, retrieval, OCR, and document understanding"
   homepage "https://github.com/CrispStrobe/CrispEmbed"
-  version "0.17.10"
   license "MIT"
 
   if OS.mac?

@@ -1,7 +1,6 @@
 class Crispasr < Formula
   desc "C++ ggml runtime for multilingual ASR and TTS"
   homepage "https://github.com/CrispStrobe/CrispASR"
-  version "0.8.32"
   license "MIT"
 
   if OS.mac?
